@@ -20,4 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('supplier2',[SupplierController::class, 'index']);
+Route::resource('supplier2',ApiController::class);

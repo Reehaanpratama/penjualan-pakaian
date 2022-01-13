@@ -15,12 +15,13 @@ class SupplierController extends Controller
     public function index()
     {
         $supplier = supplier::all();
+        return view('supplier.index', compact('supplier'));
 
-        return response()->json([
-            'succes' => true,
-            'message' => 'List Data Supplier',
-            'data' => $supplier
-        ], 200);
+        // return response()->json([
+        //     'succes' => true,
+        //     'message' => 'List Data Supplier',
+        //     'data' => $supplier
+        // ], 200);
     }
 
     /**
