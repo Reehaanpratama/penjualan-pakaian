@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Alert;
 use App\Models\barang;
 use App\Models\transaksi;
+use Illuminate\Http\Request;
 
 class TransaksiController extends Controller
 {
@@ -82,7 +83,6 @@ class TransaksiController extends Controller
         $barang = barang::all();
         return view('transaksi.edit', compact('transaksi', 'barang'));
 
-
     }
 
     /**
@@ -106,6 +106,8 @@ class TransaksiController extends Controller
         $transaksi->jumlah = $request->jumlah;
         $transaksi->total_bayar = $request->total_bayar;
         $transaksi->save();
+        Alert::success('Success', 'Data edited successfully');
+
         return redirect()->route('transaksi.index');
     }
 
@@ -119,6 +121,8 @@ class TransaksiController extends Controller
     {
         $transaksi = transaksi::findOrFail($id);
         $transaksi->delete();
+        Alert::success('Success', 'Data deleted successfully');
+
         return redirect()->route('transaksi.index');
     }
 }

@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Alert;
 use App\Models\barang;
 use App\Models\supplier;
-
 use Illuminate\Http\Request;
 
 class BarangController extends Controller
@@ -65,6 +65,7 @@ class BarangController extends Controller
             $barang->cover = $name;
         }
         $barang->save();
+        Alert::success('Good Job', 'Data saved successfully');
         return redirect()->route('barang.index');
     }
 
@@ -129,6 +130,7 @@ class BarangController extends Controller
             $barang->cover = $name;
         }
         $barang->save();
+        Alert::success('Good Job', 'Data saved successfully');
         return redirect()->route('barang.index');
     }
 
@@ -143,6 +145,9 @@ class BarangController extends Controller
         $barang = barang::findOrFail($id);
         $barang->deleteImage();
         $barang->delete();
+        Alert::success('Success', 'Data deleted successfully');
+
         return redirect()->route('barang.index');
     }
+
 }

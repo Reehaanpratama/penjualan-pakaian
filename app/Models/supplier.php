@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Alert;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,6 +16,25 @@ class supplier extends Model
 
     public function barangs()
     {
-        $this->hasMany('App\Models\barang', 'id_supplier');
+        return $this->hasMany('App\Models\barang', 'id_supplier');
+    }
+
+    public static function boot()
+    {
+
+        parent::boot();
+
+        self::deleting(function ($barang) {
+
+            if ($barang->barangs->count() > 0) {
+
+                Alert::error('Failed', 'Data not deleted');
+
+                return false;
+
+            }
+
+        });
+
     }
 }

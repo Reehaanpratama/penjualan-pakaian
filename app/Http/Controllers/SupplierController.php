@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Alert;
 use App\Models\supplier;
 use Illuminate\Http\Request;
 
@@ -93,6 +94,9 @@ class SupplierController extends Controller
         $supplier = supplier::findOrFail($id);
         $supplier->nama_supplier = $request->nama_supplier;
         $supplier->save();
+
+        Alert::success('Success', 'Data updated successfully');
+
         return redirect()->route('supplier.index');
     }
 
@@ -104,8 +108,16 @@ class SupplierController extends Controller
      */
     public function destroy($id)
     {
-        $supplier =supplier::findOrFail($id);
-        $supplier->delete();
+        // $supplier = supplier::findOrFail($id);
+        // $supplier->delete();
+        if (!supplier::destroy($id)) {
+
+            return redirect()->back();
+
+        }
+
+        Alert::success('Success', 'Data deleted successfully');
+
         return redirect()->route('supplier.index');
     }
 }

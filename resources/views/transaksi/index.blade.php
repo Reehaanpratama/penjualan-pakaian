@@ -47,8 +47,8 @@
                                                     class="btn btn-default">Edit</a>
                                                 <a href="{{ route('transaksi.show', $data->id) }}"
                                                     class="btn btn-default">Show</a>
-                                                <button type="submit" class="btn btn-default"
-                                                    onclick="return confirm('Apakah anda yakin menghapus ini?');">Delete</button>
+                                                <button type="submit" class="btn btn-danger delete-confirm">Delete</button>
+
                                             </form>
                                         </td>
                                     </tr>

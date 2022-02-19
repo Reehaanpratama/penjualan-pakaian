@@ -24,8 +24,7 @@ class CreateBarangsTable extends Migration
             $table->bigInteger('id_supplier')->unsigned();
             // fk id_supplier
             $table->foreign('id_supplier')->references('id')
-                ->on('suppliers')->onUpdate('cascade')
-                ->onDelete('cascade');
+                ->on('suppliers')->onUpdate('cascade');
             $table->timestamps();
         });
     }
