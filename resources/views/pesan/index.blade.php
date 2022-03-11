@@ -9,7 +9,6 @@
         <div class="col-md-12 mt-2">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">{{ $barang->nama_barang }}</li>
                 </ol>
             </nav>
@@ -37,7 +36,7 @@
                                             <form method="post" action="{{ url('pesan') }}/{{ $barang->id }}">
                                                 @csrf
                                                 <input type="text" name="jumlah_pesan" class="form-control" required="">
-                                                <button type="submit" class="btn btn-primary mt-2"><i class="fa fa-shopping-cart"></i> Masukkan Keranjang</button>
+                                                <button type="submit" class="btn btn-primary mt-2"><i class="fa fa-shopping-cart"></i>Beli Sekarang</button>
                                             </form>
                                         </td>
                                     </tr>

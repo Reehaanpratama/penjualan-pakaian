@@ -163,17 +163,13 @@
 												</div>
 											</div>
 											<div class="product-body">
-												<p class="product-category">Category</p>
+												<p class="product-category">T-shirt</p>
 												<h3 class="product-name"><a href="#">{{ $data->nama_barang }} </a></h3>
 												<h4 class="product-price">{{ $data->harga }} </h4>
-												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-												</div>
+
 											</div>
 											<div class="add-to-cart">
-												<button  class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> <a href="{{url('pesan', $data->id)}}">add to cart</a></button>
+												<button  class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> <a href="{{url('pesan', $data->id)}}">masukan keranjang</a></button>
 											</div>
 										</div>
 										<!-- /product -->
@@ -244,11 +240,8 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="newsletter">
-							<p>Sign Up for the <strong>NEWSLETTER</strong></p>
-							<form>
-								<input class="input" type="email" placeholder="Enter Your Email">
-								<button class="newsletter-btn"><i class="fa fa-envelope"></i> Subscribe</button>
-							</form>
+							<p>CHRONIC ROCK <strong>MERCHANDISE</strong></p>
+
 							<ul class="newsletter-follow">
 								<li>
 									<a href="#"><i class="fa fa-facebook"></i></a>
@@ -258,9 +251,6 @@
 								</li>
 								<li>
 									<a href="#"><i class="fa fa-instagram"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="fa fa-pinterest"></i></a>
 								</li>
 							</ul>
 						</div>
@@ -285,17 +275,10 @@
 					<!-- row -->
 					<div class="row">
 						<div class="col-md-12 text-center">
-							<ul class="footer-payments">
-								<li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
-								<li><a href="#"><i class="fa fa-credit-card"></i></a></li>
-								<li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
-								<li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
-								<li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
-								<li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
-							</ul>
+
 							<span class="copyright">
 								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Rehan Pratama
 							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 							</span>
 						</div>
